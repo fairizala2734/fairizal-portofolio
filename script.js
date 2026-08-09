@@ -1,3 +1,12 @@
+const heroActions = document.querySelector('.hero .actions');
+
+if (heroActions) {
+  heroActions.insertAdjacentHTML(
+    'beforeend',
+    '<a class="button secondary" href="https://drive.google.com/file/d/1M7P5gtRLOeqCj6yqikhrcDpgAR295bEy/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i data-lucide="file-down"></i>Unduh CV</a>'
+  );
+}
+
 if (window.lucide) window.lucide.createIcons();
 
 document.querySelectorAll('.copy-email').forEach((button) => {
