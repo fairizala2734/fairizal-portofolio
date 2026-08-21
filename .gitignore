@@ -1,0 +1,13 @@
+# Source materials for case studies. Keep these local and never deploy them.
+assets/stunting/
+assets/microsleep/
+assets/preeclampsia/
+assets/remind/
+assets/facetro/
+assets/comparative/
+assets/stunting.zip
+
+# Legacy generated assets; the website now reads only from assets/portfolio/.
+assets/case-studies/
+
+# All publication-safe assets used by the website live in assets/portfolio/.

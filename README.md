@@ -6,7 +6,13 @@ Static portfolio site ready for Vercel.
 
 - `/` — homepage
 - `/projects` — all projects
-- `/project-stunting` — Stunting Classification Pipeline case study
+- `/project-stunting` — Stunting Classification case study
+- `/project-microsleep` — Microsleep Detector case study
+- `/project-preeclampsia` — Preeclampsia Detection case study
+- `/project-comparative-text` — Comparative Text Analysis case study
+- `/project-remind` — REMIND Driver Safety System case study
+- `/project-facetro` — FACETRO Attendance System case study
+- `/project-iot-academic` — IoT Academic Prototypes summary
 
 ## Deploy to Vercel
 
