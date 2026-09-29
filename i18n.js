@@ -26,7 +26,7 @@
     'Hubungi saya': 'Contact me',
     'Mari terhubung': "Let's connect",
     'Terbuka untuk berbagai peran teknologi': 'Open to a wide range of technology roles',
-    'Terbuka untuk peluang AI dan peran teknologi secara luas.': 'Open to opportunities in AI and across the broader technology field.',
+    'Terbuka untuk peluang AI dan peran teknologi secara luas.': 'Open to AI and broader technology opportunities.',
     'Terbuka untuk peluang dan kolaborasi.': 'Open to opportunities and collaboration.',
     'Lokasi': 'Location',
     'Salin alamat email': 'Copy email address',
