@@ -49,14 +49,14 @@ document.querySelectorAll('.copy-email').forEach((button) => {
     const status = document.querySelector('#copy-status');
     try {
       await navigator.clipboard.writeText(button.dataset.email);
-      label.textContent = 'Email tersalin';
-      if (status) status.textContent = 'Alamat email berhasil disalin.';
+      label.textContent = window.portfolioI18n?.translate('Email tersalin') || 'Email tersalin';
+      if (status) status.textContent = window.portfolioI18n?.translate('Alamat email berhasil disalin.') || 'Alamat email berhasil disalin.';
     } catch {
       label.textContent = button.dataset.email;
-      if (status) status.textContent = 'Alamat email ditampilkan untuk disalin secara manual.';
+      if (status) status.textContent = window.portfolioI18n?.translate('Alamat email ditampilkan untuk disalin secara manual.') || 'Alamat email ditampilkan untuk disalin secara manual.';
     }
     window.setTimeout(() => {
-      label.textContent = 'Email';
+      label.textContent = window.portfolioI18n?.translate('Email') || 'Email';
       if (status) status.textContent = '';
     }, 1800);
   });
@@ -77,7 +77,8 @@ document.querySelectorAll('.filters button').forEach((button) => {
       if (isVisible) visibleProjects += 1;
     });
     const projectCount = document.querySelector('#project-count');
-    if (projectCount) projectCount.textContent = `${visibleProjects} proyek`;
+    if (window.portfolioI18n) window.portfolioI18n.updateProjectCount();
+    else if (projectCount) projectCount.textContent = `${visibleProjects} proyek`;
   });
 });
 
@@ -125,4 +126,13 @@ if (navigationSections.length > 1) {
   window.addEventListener('scroll', updateActiveNavigation, { passive: true });
   window.addEventListener('resize', updateActiveNavigation);
   updateActiveNavigation();
+}
+
+if (window.portfolioI18n) {
+  window.portfolioI18n.init();
+} else {
+  const i18nScript = document.createElement('script');
+  i18nScript.src = 'i18n.js';
+  i18nScript.onload = () => window.portfolioI18n?.init();
+  document.head.appendChild(i18nScript);
 }
